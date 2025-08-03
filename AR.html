@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Autocad Education Software - AR Demo</title>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+    }
+    .header {
+      text-align: center;
+      padding: 40px 20px 20px 20px;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    .content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 20px;
+    }
+    .content img {
+      max-width: 800px;
+      width: 100%;
+      border: 1px solid #ccc;
+      margin-bottom: 20px;
+    }
+    model-viewer {
+      width: 100%;
+      max-width: 600px;
+      height: 500px;
+    }
+    .ar-section {
+      display: flex;
+      justify-content: center;
+      padding: 40px 0;
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">JBL Speaker</div>
+
+  <div class="content">
+    <img src="https://raw.githubusercontent.com/syakiltrm/EGL305/main/Images/black-silhouettes-music-concert-poster-concept.jpg" alt="Autodesk Edu-License Screenshot">
+    <p style="max-width: 800px; text-align: center;">
+      This is a JBL Speaker. Below is the 3D Model of it.
+    </p>
+  </div>
+
+  <div class="ar-section">
+    <model-viewer
+      src="https://raw.githubusercontent.com/syakiltrm/EGL305/main/3D%20Scans/8_3_2025.glb"
+      ar
+      ar-modes="scene-viewer quick-look webxr"
+      camera-controls
+      auto-rotate
+      environment-image="neutral"
+      exposure="1"
+      shadow-intensity="1"
+      alt="A 3D model of an object">
+
+      <button slot="ar-button" style="
+          position: absolute;
+          bottom: 16px;
+          left: 50%;
+          transform: translateX(-50%);
+          padding: 12px 24px;
+          font-size: 16px;
+          background: #000;
+          color: #fff;
+          border: none;
+          border-radius: 8px;
+          cursor: pointer;">
+        View in your space
+      </button>
+    </model-viewer>
+  </div>
+
+</body>
+</html>
